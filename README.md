@@ -8,7 +8,7 @@
 2. How do you **create and insert a new element into the DOM**?
 
    Ans: **create element**: let p = document.createElement('p')
-   **insert element*: document.body.appendChild('p')
+   **insert element**: document.body.appendChild('p')
    
 3. What is **Event Bubbling** and how does it work?
 
