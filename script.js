@@ -53,7 +53,7 @@ for ( let call of calls){
             }
 
             else{
-                alert("Not enough coins. You need at least 20 coins to make a call.")
+                alert("❌ Not enough coins. You need at least 20 coins to make a call.")
             }
 
             //-------------------------------- Clear History --------------------------------
@@ -61,9 +61,6 @@ for ( let call of calls){
             document.getElementById("history").innerHTML = ""})
         })
 
-        
-
-        
     }
     
     i++;
@@ -72,7 +69,6 @@ for ( let call of calls){
 
 
 // Copy Functionality
-
 function copy(id) {
     let text = document.getElementById(id).innerText;
     navigator.clipboard.writeText(text);
