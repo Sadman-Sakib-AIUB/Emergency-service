@@ -36,7 +36,7 @@
             </div>
 
             <div class="flex gap-2 justify-center items-center p-2 w-[123px] h-[52px] bg-[#00A63E] rounded-full">
-                <p class="font-bold text-xl text-white"><span>0</span> Copy</p>
+                <p class="font-bold text-xl text-white"><span id="copy-count">0</span> Copy</p>
             </div>
         </div>
     </nav>
@@ -72,7 +72,7 @@
             </button>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" onclick="copy('number1')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
                 <button type="submit" id="call1" class="call w-1/2 rounded-lg bg-green-600 text-white cursor-pointer"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
@@ -98,7 +98,7 @@
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
+                <button type="submit" onclick="copy('number2')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
                 <button type="submit" id="call2" class="call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
@@ -124,7 +124,7 @@
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
+                <button type="submit" onclick="copy('number3')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
                 <button type="submit" id="call3" class="call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone"></i>Call</button>
             </div>
 
@@ -142,10 +142,10 @@
                 </div>
 
                 <div class="flex gap-2 justify-center items-center p-2 w-[123px] h-[52px] bg-[#00A63E] rounded-full">
-                    <p class="text-lg text-white">Clear</p>
+                    <p class="text-lg text-white cursor-pointer" id="btn-clear">Clear</p>
                 </div>
             </div>
-            <div id="clear-all">
+            <div id="history">
 
             </div>
 
@@ -165,16 +165,16 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title5">Ambulance Help Service</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title5">Ambulance Help Service</h1>
             <p class="mt-3">Ambulance</p>
-            <h1 class="font-bold text-3xl mt-3" id="number5">1994-999999</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number5">1994-999999</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">Health</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call5" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number5')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call5" class="call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
         </div>
@@ -191,16 +191,16 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title6">Women & Child Helpline</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title6">Women & Child Helpline</h1>
             <p class="mt-3">Women & Child Helpline</p>
-            <h1 class="font-bold text-3xl mt-3" id="number6">109</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number6">109</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">Help</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call6" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number6')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call6" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2 call"></i>Call</button>
             </div>
 
         </div>
@@ -217,16 +217,16 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title7">Anti-Corruption Helpline</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title7">Anti-Corruption Helpline</h1>
             <p class="mt-3">Anti-Corruption</p>
-            <h1 class="font-bold text-3xl mt-3" id="number7">106</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number7">106</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">Govt.</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call7" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number7')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call7" class=" call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
 
@@ -245,16 +245,16 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title8">Electricity Helpline Number</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title8">Electricity Helpline Number</h1>
             <p class="mt-3">Electricity Outage</p>
-            <h1 class="font-bold text-3xl mt-3" id="number8">16216</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number8">16216</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">Electricity</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call8" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number8')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call8" class=" call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
 
@@ -273,16 +273,16 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title9">Brac Helpline <br>Number</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title9">Brac Helpline <br>Number</h1>
             <p class="mt-3">Brac</p>
-            <h1 class="font-bold text-3xl mt-3" id="number9">16445</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number9">16445</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">NGO</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call9" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number9')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call9" class=" call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
 
@@ -301,21 +301,23 @@
                 </div>
             </div>
 
-            <h1 class=" font-bold text-3xl mt-3" id="title10">Bangladesh Railway Helpline</h1>
+            <h1 class=" font-bold text-3xl mt-3 title" id="title10">Bangladesh Railway Helpline</h1>
             <p class="mt-3">Bangladesh Railway</p>
-            <h1 class="font-bold text-3xl mt-3" id="number10">163</h1>
+            <h1 class="font-bold text-3xl mt-3 number" id="number10">163</h1>
             <div class="flex gap-2 justify-center items-center p-2 w-[100px] h-[35px] bg-[#f2f2f2] rounded-full mt-3">
                 <p class=" text-[#5c5c5c]">Travel</p>
             </div>
 
             <div class="flex gap-2 mt-3">
-                <button type="submit" class="btn w-1/2"><i class="fa-solid fa-copy"></i>All</button>
-                <button type="submit" id="call10" class=" w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
+                <button type="submit" onclick="copy('number9')" class="btn w-1/2"><i class="fa-solid fa-copy"></i>Copy</button>
+                <button type="submit" id="call10" class=" call w-1/2 rounded-lg bg-green-600 text-white"><i class="fa-solid fa-phone mr-2"></i>Call</button>
             </div>
 
         </div>
 
     </section>
+
+    <!------------------------------------- Js ------------------------------------>
     <script src="script.js"></script>
 </body>
 </html>
