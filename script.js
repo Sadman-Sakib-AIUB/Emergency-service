@@ -28,7 +28,7 @@ for ( let call of calls){
             let num = number.innerText;
 
             if( coin >= 20 ){
-                alert("Calling " + name +" : " + num)
+                alert("📞 Calling " + name +" : " + num)
 
                 coin = coin - 20;
                 document.getElementById('coin-count').innerText = coin;
