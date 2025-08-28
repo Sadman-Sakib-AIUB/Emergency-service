@@ -9,6 +9,7 @@ for (let heart of hearts){
     })
 }
 
+
 // Call Functionality + History
 let coin = parseInt(document.getElementById('coin-count').innerText);
 
